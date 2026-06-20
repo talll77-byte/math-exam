@@ -1,0 +1,50 @@
+site_name: Math Exam Kit
+site_description: נגזרות, תחום הגדרה, חקירת פונקציות
+site_url: https://math-exam.pages.dev
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: he
+  direction: rtl
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: מצב כהה
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: מצב בהיר
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - בית: index.md
+  - דשבורד כללים: dashboard.md
+  - נגזרות: 01-derivatives.md
+  - תחום הגדרה: 02-domain.md
+  - חקירת פונקציה: 03-investigation.md
+  - מוקשים: 04-pitfalls.md
