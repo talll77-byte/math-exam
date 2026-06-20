@@ -1,23 +1,96 @@
-/* Math must stay LTR even on RTL Hebrew pages */
+/* ── Base: Hebrew body RTL, math always LTR ── */
 .md-typeset .arithmatex,
 .md-typeset mjx-container,
-.md-typeset mjx-container * {
+.md-typeset mjx-container *,
+.md-typeset .math-only,
+.md-typeset .formula-block {
   direction: ltr;
   unicode-bidi: isolate;
+  text-align: center;
 }
 
-.md-typeset .arithmatex {
-  display: inline-block;
-  max-width: 100%;
+.md-typeset .he-only {
+  direction: rtl;
+  unicode-bidi: isolate;
+  text-align: right;
+}
+
+/* Block formulas */
+.md-typeset .formula-block {
+  display: block;
+  margin: 0.6em 0 0.8em;
+  padding: 0.5em 0.75em;
+  background: var(--md-code-bg-color);
+  border-radius: 0.35rem;
   overflow-x: auto;
 }
 
 .md-typeset div.arithmatex {
   display: block;
-  margin: 0.75em 0;
+  margin: 0.6em 0;
   text-align: center;
 }
 
-.md-typeset table .arithmatex {
-  white-space: nowrap;
+/* Learning tables: all content tables in docs */
+.md-typeset table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.md-typeset table th,
+.md-typeset table td {
+  vertical-align: top;
+  padding: 0.65em 0.75em;
+}
+
+/* Last column in 3-col tables = Hebrew */
+.md-typeset table th:first-child,
+.md-typeset table td:first-child {
+  direction: rtl;
+  text-align: right;
+  width: 28%;
+}
+
+/* Middle column = math only */
+.md-typeset table th:nth-child(2),
+.md-typeset table td:nth-child(2) {
+  direction: ltr;
+  text-align: center;
+  width: 44%;
+}
+
+.md-typeset table th:nth-child(3),
+.md-typeset table td:nth-child(3) {
+  direction: rtl;
+  text-align: right;
+  width: 28%;
+}
+
+/* 2-column tables: Hebrew | math */
+.md-typeset table th:first-child:nth-last-child(2),
+.md-typeset table td:first-child:nth-last-child(2) {
+  width: 35%;
+}
+
+.md-typeset table th:last-child:nth-first-child(2),
+.md-typeset table td:last-child:nth-first-child(2) {
+  width: 65%;
+}
+
+/* Steps for learning path */
+.md-typeset .study-step {
+  border-right: 4px solid var(--md-primary-fg-color);
+  padding: 0.25em 1em 0.25em 0;
+  margin: 1em 0;
+}
+
+.md-typeset .study-step h3 {
+  margin-top: 0;
+}
+
+/* Inline math in Hebrew sentences: avoid — but if present, isolate */
+.md-typeset p .arithmatex {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.15em;
 }

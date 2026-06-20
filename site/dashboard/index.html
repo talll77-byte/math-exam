@@ -328,7 +328,29 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ניווט
+        נגזרות
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        תחום הגדרה
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        חקירת פונקציה
       
     </span>
   </a>
@@ -481,7 +503,29 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ניווט
+        נגזרות
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        תחום הגדרה
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        חקירת פונקציה
       
     </span>
   </a>
@@ -506,30 +550,32 @@
 
 
 <h1 id="_1">דשבורד כללים</h1>
-<p>נקודת כניסה אחת. לפרטים מלאים — עבור לקובץ המודול הרלוונטי.</p>
+<p>טבלאות לחזרה מהירה. <strong>עמודה 1 ו-3 — עברית בלבד. עמודה 2 — נוסחאות בלבד.</strong></p>
+<hr />
+<h2 id="_2">נגזרות</h2>
 <table>
 <thead>
 <tr>
-<th>מבנה מתמטי</th>
-<th>נוסחה / אילוץ</th>
-<th>מוקש ביצוע</th>
+<th>מבנה</th>
+<th>נוסחה</th>
+<th>מוקש</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>פולינום בסיסי</td>
-<td><span class="arithmatex">\(f(x)=c\cdot x^n \Rightarrow f'(x)=cnx^{n-1}\)</span></td>
-<td>לא לשכוח מקדם <span class="arithmatex">\(c\)</span></td>
+<td><span class="arithmatex">\(f(x)=c\cdot x^n \Rightarrow f'(x)=c\cdot n\cdot x^{n-1}\)</span></td>
+<td>לא לשכוח את המקדם c</td>
 </tr>
 <tr>
 <td>Chain Rule</td>
 <td><span class="arithmatex">\(f(x)=c\cdot\left[g(x)\right]^n \Rightarrow f'(x)=c\cdot n\cdot\left[g(x)\right]^{n-1}\cdot g'(x)\)</span></td>
-<td>מינוס בפנימית: <span class="arithmatex">\(\frac{d}{dx}(5-x)=-1\)</span></td>
+<td>נגזרת פנימית שלילית</td>
 </tr>
 <tr>
 <td>מנה — מונה קבוע</td>
 <td><span class="arithmatex">\(\left(\frac{c}{g(x)}\right)'=\frac{-c\cdot g'(x)}{\left[g(x)\right]^2}\)</span></td>
-<td>המינוס בנוסחה; <span class="arithmatex">\(g'=-1\)</span> מבטל מינוס</td>
+<td>שים לב למינוס בנוסחה</td>
 </tr>
 <tr>
 <td>מנה — מונה משתנה</td>
@@ -538,18 +584,18 @@
 </tr>
 <tr>
 <td>Product Rule</td>
-<td><span class="arithmatex">\((uv)'=u'v+uv'\)</span></td>
-<td>3 איברים → לפתוח ל-2 לפני גזירה</td>
+<td><span class="arithmatex">\((u\cdot v)'=u'v+uv'\)</span></td>
+<td>3 איברים: פתח ל-2 לפני גזירה</td>
 </tr>
 <tr>
 <td>Double Chain</td>
-<td><span class="arithmatex">\((uv)'\)</span> + שרשרת ב-<span class="arithmatex">\(u'\)</span> וב-<span class="arithmatex">\(v'\)</span></td>
-<td>לא לדלג על שכבה פנימית</td>
+<td><span class="arithmatex">\((uv)'=u'v+uv'\)</span></td>
+<td>שרשרת ב-u וב-v לפני הצבה</td>
 </tr>
 <tr>
 <td>כפל חזקות</td>
 <td><span class="arithmatex">\(x^n\cdot x^m=x^{n+m}\)</span></td>
-<td><strong>לא</strong> <span class="arithmatex">\(x^{n\cdot m}\)</span></td>
+<td>לא <span class="arithmatex">\(x^{n\cdot m}\)</span></td>
 </tr>
 <tr>
 <td>חזקה שלילית</td>
@@ -558,118 +604,127 @@
 </tr>
 <tr>
 <td>גורם משותף</td>
-<td>חילוץ חזקה <strong>מינימלית</strong></td>
+<td>חילוץ חזקה מינימלית</td>
 <td>הכנה ל-<span class="arithmatex">\(f'(x)=0\)</span></td>
 </tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">נגזרת פנימית</p>
+<div class="arithmatex">\[\frac{d}{dx}(5-x)=-1\]</div>
+<div class="arithmatex">\[\frac{d}{dx}(6-x)=-1\]</div>
+</div>
+<p><a href="../01-derivatives/">פרק מלא: נגזרות →</a></p>
+<hr />
+<h2 id="_3">תחום הגדרה</h2>
+<table>
+<thead>
+<tr>
+<th>מבנה</th>
+<th>אילוץ</th>
+<th>מוקש</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>שבר רציונלי</td>
 <td><span class="arithmatex">\(Q(x)\neq 0\)</span></td>
-<td><span class="arithmatex">\(x\neq\)</span> נקודות אפס המכנה</td>
+<td>x שונה מנקודות אפס המכנה</td>
 </tr>
 <tr>
 <td>שורש במונה</td>
 <td><span class="arithmatex">\(g(x)\ge 0\)</span></td>
-<td>כולל שוויון</td>
+<td>כולל שוויון לאפס</td>
 </tr>
 <tr>
 <td>שורש במכנה</td>
 <td><span class="arithmatex">\(g(x)&gt;0\)</span></td>
-<td><strong>ללא</strong> שוויון — אסור 0 במכנה</td>
+<td>ללא שוויון</td>
 </tr>
 <tr>
 <td>מערכת אילוצים</td>
-<td>חיתוך <strong>"וגם"</strong></td>
-<td>פתר כל רכיב בנפרד → ציר אחד</td>
+<td>חיתוך "וגם"</td>
+<td>פתר כל רכיב בנפרד</td>
 </tr>
 <tr>
+<td>דלתא חיובית</td>
 <td><span class="arithmatex">\(\Delta&gt;0\)</span></td>
-<td>2 שורשים; פירוק <span class="arithmatex">\(a(x-x_1)(x-x_2)\)</span></td>
-<td>—</td>
+<td>2 שורשים</td>
 </tr>
 <tr>
+<td>דלתא אפס</td>
 <td><span class="arithmatex">\(\Delta=0\)</span></td>
-<td>שורש יחיד; ריבוע מושלם</td>
-<td>—</td>
+<td>שורש יחיד</td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(\Delta&lt;0\)</span> במכנה</td>
-<td>מכנה "חסין" — אין אילוץ</td>
-<td><strong>עצור</strong> — אל תבזבז זמן</td>
+<td>דלתא שלילית במכנה</td>
+<td>אין אפסים</td>
+<td>עצור — "כל x"</td>
 </tr>
 <tr>
-<td>פרבולה <span class="arithmatex">\(a&gt;0\)</span></td>
+<td>פרבולה צוחקת</td>
+<td><span class="arithmatex">\(a&gt;0\)</span></td>
 <td>חיובי מחוץ לשורשים</td>
-<td>"צוחקת"</td>
 </tr>
 <tr>
-<td>פרבולה <span class="arithmatex">\(a&lt;0\)</span></td>
+<td>פרבולה בוכה</td>
+<td><span class="arithmatex">\(a&lt;0\)</span></td>
 <td>חיובי בין השורשים</td>
-<td>"בוכה"; שורש → תחום סגור</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(f'(x)&gt;0\)</span></td>
-<td>עלייה <span class="arithmatex">\(\nearrow\)</span></td>
-<td>סימן <span class="arithmatex">\(f'\)</span> קובע מונוטוניות</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(f'(x)&lt;0\)</span></td>
-<td>ירידה <span class="arithmatex">\(\searrow\)</span></td>
-<td>—</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(f'(x)=0\)</span></td>
-<td>נקודה חשודה</td>
-<td>לא בהכרח קיצון</td>
-</tr>
-<tr>
-<td>Max</td>
-<td><span class="arithmatex">\(\nearrow\bullet\searrow\)</span></td>
-<td>—</td>
-</tr>
-<tr>
-<td>Min</td>
-<td><span class="arithmatex">\(\searrow\bullet\nearrow\)</span></td>
-<td>—</td>
-</tr>
-<tr>
-<td>פיתול אופקי</td>
-<td><span class="arithmatex">\(\nearrow\bullet\nearrow\)</span> / <span class="arithmatex">\(\searrow\bullet\searrow\)</span></td>
-<td><span class="arithmatex">\(f''=0\)</span> <strong>לא מספיק</strong> — חובה טבלה</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(f''&gt;0\)</span> בנקודה</td>
-<td>Min</td>
-<td>לא מחליף טבלה לעלייה/ירידה</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(f''&lt;0\)</span> בנקודה</td>
-<td>Max</td>
-<td>—</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(y_0\)</span></td>
-<td><span class="arithmatex">\(f(x_0)\)</span> בפונקציה <strong>המקורית</strong></td>
-<td>לא בנגזרת</td>
-</tr>
-<tr>
-<td>חזקה זוגית</td>
-<td><span class="arithmatex">\(x^4=1 \Rightarrow x=\pm 1\)</span></td>
-<td>שני שורשים</td>
-</tr>
-<tr>
-<td>מפת אילוצים</td>
-<td><strong>מ'</strong> מכנה + <strong>ש'</strong> שורש</td>
-<td>חיתוך רק בסוף</td>
 </tr>
 </tbody>
 </table>
-<h2 id="_2">ניווט</h2>
-<ul>
-<li><a href="../01-derivatives/">01 — נגזרות</a></li>
-<li><a href="../02-domain/">02 — תחום הגדרה</a></li>
-<li><a href="../03-investigation/">03 — חקירת פונקציה</a></li>
-<li><a href="../04-pitfalls/">04 — מוקשים</a></li>
-</ul>
+<p><a href="../02-domain/">פרק מלא: תחום הגדרה →</a></p>
+<hr />
+<h2 id="_4">חקירת פונקציה</h2>
+<table>
+<thead>
+<tr>
+<th>מושג</th>
+<th>כלל</th>
+<th>כלי</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>עלייה</td>
+<td><span class="arithmatex">\(f'(x)&gt;0\)</span></td>
+<td>טבלת <span class="arithmatex">\(f'\)</span></td>
+</tr>
+<tr>
+<td>ירידה</td>
+<td><span class="arithmatex">\(f'(x)&lt;0\)</span></td>
+<td>טבלת <span class="arithmatex">\(f'\)</span></td>
+</tr>
+<tr>
+<td>מקסימום</td>
+<td><span class="arithmatex">\(\nearrow\bullet\searrow\)</span></td>
+<td><span class="arithmatex">\(f''&lt;0\)</span> או טבלה</td>
+</tr>
+<tr>
+<td>מינימום</td>
+<td><span class="arithmatex">\(\searrow\bullet\nearrow\)</span></td>
+<td><span class="arithmatex">\(f''&gt;0\)</span> או טבלה</td>
+</tr>
+<tr>
+<td>פיתול אופקי</td>
+<td>אותו כיוון לפני ואחרי</td>
+<td>חובה טבלה</td>
+</tr>
+<tr>
+<td>ערך y</td>
+<td><span class="arithmatex">\(y_0=f(x_0)\)</span></td>
+<td>הצבה ב-<span class="arithmatex">\(f(x)\)</span> המקורית</td>
+</tr>
+<tr>
+<td>מפת אילוצים</td>
+<td>מכנה + שורש</td>
+<td>חיתוך בסוף</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../03-investigation/">פרק מלא: חקירה →</a></p>
+<hr />
+<p><a href="../">← בית</a> | <a href="../04-pitfalls/">מוקשים →</a></p>
 
 
 
