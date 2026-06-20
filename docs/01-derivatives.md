@@ -16,7 +16,7 @@ $$f(x)=c\cdot x^n \Rightarrow f'(x)=c\cdot n\cdot x^{n-1}$$
 
 ### Chain Rule (פונקציה מורכבת)
 
-$$f(x)=c\cdot[g(x)]^n \Rightarrow f'(x)=c\cdot n\cdot[g(x)]^{n-1}\cdot g'(x)$$
+$$f(x)=c\cdot\left[g(x)\right]^n \Rightarrow f'(x)=c\cdot n\cdot\left[g(x)\right]^{n-1}\cdot g'(x)$$
 
 **דוגמה:** $f(x)=\frac{(5-x)^3}{4}=\frac{1}{4}(5-x)^3$
 
@@ -24,7 +24,7 @@ $$f'(x)=\frac{1}{4}\cdot 3(5-x)^2\cdot(-1)=-\frac{3}{4}(5-x)^2$$
 
 ### מנה — מונה קבוע (קיצור)
 
-$$\left(\frac{c}{g(x)}\right)'=\frac{-c\cdot g'(x)}{[g(x)]^2}$$
+$$\left(\frac{c}{g(x)}\right)'=\frac{-c\cdot g'(x)}{\left[g(x)\right]^2}$$
 
 **דוגמה:** $f(x)=\frac{2}{3-x}$
 

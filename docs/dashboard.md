@@ -5,8 +5,8 @@
 | מבנה מתמטי | נוסחה / אילוץ | מוקש ביצוע |
 |---|---|---|
 | פולינום בסיסי | $f(x)=c\cdot x^n \Rightarrow f'(x)=cnx^{n-1}$ | לא לשכוח מקדם $c$ |
-| Chain Rule | $f(x)=c[g(x)]^n \Rightarrow f'(x)=cn[g(x)]^{n-1}g'(x)$ | מינוס בפנימית: $\frac{d}{dx}(5-x)=-1$ |
-| מנה — מונה קבוע | $\left(\frac{c}{g(x)}\right)'=\frac{-cg'(x)}{[g(x)]^2}$ | המינוס בנוסחה; $g'=-1$ מבטל מינוס |
+| Chain Rule | $f(x)=c\cdot\left[g(x)\right]^n \Rightarrow f'(x)=c\cdot n\cdot\left[g(x)\right]^{n-1}\cdot g'(x)$ | מינוס בפנימית: $\frac{d}{dx}(5-x)=-1$ |
+| מנה — מונה קבוע | $\left(\frac{c}{g(x)}\right)'=\frac{-c\cdot g'(x)}{\left[g(x)\right]^2}$ | המינוס בנוסחה; $g'=-1$ מבטל מינוס |
 | מנה — מונה משתנה | $\left(\frac{u}{v}\right)'=\frac{u'v-uv'}{v^2}$ | כשהמונה לא קבוע |
 | Product Rule | $(uv)'=u'v+uv'$ | 3 איברים → לפתוח ל-2 לפני גזירה |
 | Double Chain | $(uv)'$ + שרשרת ב-$u'$ וב-$v'$ | לא לדלג על שכבה פנימית |

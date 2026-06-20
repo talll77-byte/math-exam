@@ -1,0 +1,23 @@
+/* Math must stay LTR even on RTL Hebrew pages */
+.md-typeset .arithmatex,
+.md-typeset mjx-container,
+.md-typeset mjx-container * {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.md-typeset .arithmatex {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.md-typeset div.arithmatex {
+  display: block;
+  margin: 0.75em 0;
+  text-align: center;
+}
+
+.md-typeset table .arithmatex {
+  white-space: nowrap;
+}

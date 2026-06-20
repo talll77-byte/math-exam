@@ -53,6 +53,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -521,12 +523,12 @@
 </tr>
 <tr>
 <td>Chain Rule</td>
-<td><span class="arithmatex">\(f(x)=c[g(x)]^n \Rightarrow f'(x)=cn[g(x)]^{n-1}g'(x)\)</span></td>
+<td><span class="arithmatex">\(f(x)=c\cdot\left[g(x)\right]^n \Rightarrow f'(x)=c\cdot n\cdot\left[g(x)\right]^{n-1}\cdot g'(x)\)</span></td>
 <td>מינוס בפנימית: <span class="arithmatex">\(\frac{d}{dx}(5-x)=-1\)</span></td>
 </tr>
 <tr>
 <td>מנה — מונה קבוע</td>
-<td><span class="arithmatex">\(\left(\frac{c}{g(x)}\right)'=\frac{-cg'(x)}{[g(x)]^2}\)</span></td>
+<td><span class="arithmatex">\(\left(\frac{c}{g(x)}\right)'=\frac{-c\cdot g'(x)}{\left[g(x)\right]^2}\)</span></td>
 <td>המינוס בנוסחה; <span class="arithmatex">\(g'=-1\)</span> מבטל מינוס</td>
 </tr>
 <tr>
@@ -723,8 +725,6 @@
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
