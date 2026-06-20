@@ -1,16 +1,20 @@
 # נגזרות — חוקים ואלגוריתם
 
-## לפני שמתחילים
-
-**עקרון מרכזי:** אלגברה קודם, גזירה אחר כך.
-
-1. פשט ביטויים
-2. העבר מכנה לחזקה שלילית
-3. פתח מכפלה של 3 איברים ל-2 איברים
+**מה לומדים:** כללי גזירה (שרשרת, מכפלה, מנה) ופישוט אלגברי לפני השוואה לאפס.
 
 ---
 
-## חוקי אלגברה בסיסיים
+## כלל / נוסחה — פולינום בסיסי
+
+<div class="formula-block" markdown="1">
+
+$$f(x)=c\cdot x^n \Rightarrow f'(x)=c\cdot n\cdot x^{n-1}$$
+
+</div>
+
+---
+
+## אלגברה לפני גזירה
 
 <div class="formula-block" markdown="1">
 
@@ -40,17 +44,7 @@ $$\sqrt[m]{x^n}=x^{n/m}$$
 
 ---
 
-## 1. פולינום בסיסי
-
-<div class="formula-block" markdown="1">
-
-$$f(x)=c\cdot x^n \Rightarrow f'(x)=c\cdot n\cdot x^{n-1}$$
-
-</div>
-
----
-
-## 2. Chain Rule (פונקציה מורכבת)
+## Chain Rule (פונקציה מורכבת)
 
 <div class="formula-block" markdown="1">
 
@@ -58,7 +52,7 @@ $$f(x)=c\cdot\left[g(x)\right]^n \Rightarrow f'(x)=c\cdot n\cdot\left[g(x)\right
 
 </div>
 
-**דוגמה**
+**דוגמה — תרגיל 5ד':**
 
 <div class="formula-block" markdown="1">
 
@@ -80,7 +74,7 @@ $$f'(x)=\frac{1}{4}\cdot 3(5-x)^2\cdot(-1)=-\frac{3}{4}(5-x)^2$$
 
 ---
 
-## 3. מנה — מונה קבוע (קיצור)
+## מנה — מונה קבוע (קיצור)
 
 <div class="formula-block" markdown="1">
 
@@ -88,7 +82,7 @@ $$\left(\frac{c}{g(x)}\right)'=\frac{-c\cdot g'(x)}{\left[g(x)\right]^2}$$
 
 </div>
 
-**דוגמה**
+**דוגמה — תרגיל 6ו':**
 
 <div class="formula-block" markdown="1">
 
@@ -100,7 +94,7 @@ $$f'(x)=\frac{-2\cdot(-1)}{(3-x)^2}=\frac{2}{(3-x)^2}$$
 
 ---
 
-## 4. מנה — מונה משתנה (מלא)
+## מנה — מונה משתנה (מלא)
 
 <div class="formula-block" markdown="1">
 
@@ -110,7 +104,7 @@ $$\left(\frac{u}{v}\right)'=\frac{u'v-uv'}{v^2}$$
 
 ---
 
-## 5. Product Rule
+## Product Rule
 
 <div class="formula-block" markdown="1">
 
@@ -118,7 +112,7 @@ $$(u\cdot v)'=u'v+uv'$$
 
 </div>
 
-**3 איברים** — פתח ל-2 לפני גזירה:
+**3 איברים** — פתח ל-2 לפני גזירה (תרגיל 7יא'):
 
 <div class="formula-block" markdown="1">
 
@@ -128,17 +122,11 @@ $$x(x-2)(3x-4) \;\Rightarrow\; (x^2-2x)(3x-4)$$
 
 ---
 
-## 6. Double Chain Rule
+## Double Chain Rule
 
 כשגם u וגם v מורכבים — הפעל שרשרת בכל אחד לפני הצבה במכפלה.
 
----
-
-## 7. הוצאת גורם משותף מקסימלי
-
-לאחר גזירת מכפלה — חלץ את **החזקה המינימלית** מכל גורם.
-
-**דוגמה**
+**דוגמה — תרגיל 7ג':**
 
 <div class="formula-block" markdown="1">
 
@@ -158,7 +146,7 @@ $$x=0 \qquad x=6 \qquad x=\frac{18}{7}$$
 
 ---
 
-## 8. משיק ושיפוע
+## משיק ושיפוע
 
 <div class="formula-block" markdown="1">
 

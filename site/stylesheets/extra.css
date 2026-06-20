@@ -1,20 +1,19 @@
-/* ═══════════════════════════════════════════
-   Background — subtle grid + PCB / neuron motif
-   ═══════════════════════════════════════════ */
+/* Minimal study theme — readability first */
+
 :root {
-  --bg-base: #f4f6fb;
-  --bg-grid: rgba(99, 102, 241, 0.07);
-  --bg-accent: rgba(99, 102, 241, 0.05);
-  --bg-node: rgba(79, 70, 229, 0.18);
-  --bg-line: rgba(79, 70, 229, 0.09);
+  --bg-base: #f5f6f8;
+  --bg-grid: rgba(99, 102, 241, 0.03);
+  --formula-bg: rgba(99, 102, 241, 0.06);
+  --formula-border: rgba(99, 102, 241, 0.12);
+  --table-stripe: rgba(99, 102, 241, 0.04);
 }
 
 [data-md-color-scheme="slate"] {
-  --bg-base: #12141a;
-  --bg-grid: rgba(129, 140, 248, 0.06);
-  --bg-accent: rgba(129, 140, 248, 0.04);
-  --bg-node: rgba(165, 180, 252, 0.14);
-  --bg-line: rgba(165, 180, 252, 0.07);
+  --bg-base: #1a1d24;
+  --bg-grid: rgba(129, 140, 248, 0.04);
+  --formula-bg: rgba(129, 140, 248, 0.08);
+  --formula-border: rgba(129, 140, 248, 0.15);
+  --table-stripe: rgba(129, 140, 248, 0.06);
 }
 
 html {
@@ -25,76 +24,25 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: -2;
+  z-index: -1;
   pointer-events: none;
   background-color: var(--bg-base);
   background-image:
     linear-gradient(var(--bg-grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--bg-grid) 1px, transparent 1px),
-    radial-gradient(circle at 15% 20%, var(--bg-accent) 0%, transparent 42%),
-    radial-gradient(circle at 85% 75%, var(--bg-accent) 0%, transparent 38%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480' viewBox='0 0 480 480'%3E%3Cg fill='none' stroke='%234f46e5' stroke-opacity='0.11' stroke-width='1'%3E%3Cpath d='M40 120h80l40-40 60 60 80-80 120 120'/%3E%3Cpath d='M60 320h100l30 30 70-70 90 90 70-50'/%3E%3Cpath d='M200 40v60l50 50V200'/%3E%3Cpath d='M360 260v80l-60 40'/%3E%3C/g%3E%3Cg fill='%234f46e5' fill-opacity='0.13'%3E%3Ccircle cx='120' cy='120' r='4'/%3E%3Ccircle cx='240' cy='80' r='3'/%3E%3Ccircle cx='380' cy='200' r='4'/%3E%3Ccircle cx='160' cy='350' r='3'/%3E%3Ccircle cx='320' cy='380' r='4'/%3E%3Ccircle cx='420' cy='120' r='3'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 32px 32px, 32px 32px, 100% 100%, 100% 100%, 480px 480px;
-  background-position: 0 0, 0 0, 0 0, 0 0, center;
-  opacity: 0.85;
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  inset: -20%;
-  z-index: -1;
-  pointer-events: none;
-  background: radial-gradient(ellipse at 30% 40%, rgba(99, 102, 241, 0.06), transparent 55%),
-              radial-gradient(ellipse at 70% 60%, rgba(139, 92, 246, 0.05), transparent 50%);
-  animation: bg-drift 90s ease-in-out infinite alternate;
+    linear-gradient(90deg, var(--bg-grid) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body::after {
-    animation: none;
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }
 
-@keyframes bg-drift {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(2%, -1.5%) scale(1.03); }
-}
-
-/* Content panels — readable over background */
-.md-main__inner {
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(6px);
-  border-radius: 0.5rem;
-  margin: 0.5rem;
-  padding-bottom: 1rem;
-}
-
-[data-md-color-scheme="slate"] .md-main__inner {
-  background: rgba(22, 25, 32, 0.78);
-}
-
-.md-header {
-  background: rgba(255, 255, 255, 0.88) !important;
-  backdrop-filter: blur(8px);
-}
-
-[data-md-color-scheme="slate"] .md-header {
-  background: rgba(18, 20, 26, 0.9) !important;
-}
-
-.md-sidebar__inner {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(4px);
-}
-
-[data-md-color-scheme="slate"] .md-sidebar__inner {
-  background: rgba(18, 20, 26, 0.72);
-}
-
-/* ═══════════════════════════════════════════
-   RTL / LTR — strict separation
-   ═══════════════════════════════════════════ */
+/* RTL / LTR — strict separation */
 .md-typeset .arithmatex,
 .md-typeset mjx-container,
 .md-typeset mjx-container * {
@@ -104,13 +52,11 @@ body::after {
 
 .md-typeset .he-only,
 .md-typeset .formula-caption,
-.md-typeset .study-step,
-.md-typeset .md-typeset__table {
+.md-typeset .study-step {
   direction: rtl;
   unicode-bidi: isolate;
 }
 
-/* Math blocks — LTR only, never Hebrew inside */
 .md-typeset .formula-block {
   direction: ltr;
   unicode-bidi: isolate;
@@ -118,15 +64,10 @@ body::after {
   margin: 0.5em 0;
   padding: 0.65em 0.85em;
   text-align: center;
-  background: rgba(99, 102, 241, 0.06);
-  border: 1px solid rgba(99, 102, 241, 0.12);
-  border-radius: 0.4rem;
+  background: var(--formula-bg);
+  border: 1px solid var(--formula-border);
+  border-radius: 0.35rem;
   overflow-x: auto;
-}
-
-[data-md-color-scheme="slate"] .md-typeset .formula-block {
-  background: rgba(129, 140, 248, 0.08);
-  border-color: rgba(129, 140, 248, 0.15);
 }
 
 .md-typeset .formula-caption {
@@ -146,21 +87,24 @@ body::after {
   text-align: center;
 }
 
-/* Tables */
+/* Tables — simple, readable */
 .md-typeset table {
   width: 100%;
   table-layout: fixed;
-  background: rgba(255, 255, 255, 0.55);
-}
-
-[data-md-color-scheme="slate"] .md-typeset table {
-  background: rgba(30, 33, 42, 0.55);
+  border: 1px solid var(--formula-border);
+  border-radius: 0.35rem;
+  overflow: hidden;
 }
 
 .md-typeset table th,
 .md-typeset table td {
   vertical-align: top;
-  padding: 0.65em 0.75em;
+  padding: 0.6em 0.75em;
+  border-bottom: 1px solid var(--formula-border);
+}
+
+.md-typeset table tbody tr:nth-child(even) {
+  background: var(--table-stripe);
 }
 
 .md-typeset table th:first-child,
@@ -184,11 +128,8 @@ body::after {
   width: 28%;
 }
 
-/* Sign / wide tables (investigation) */
 .md-typeset table.sign-table th:first-child,
 .md-typeset table.sign-table td:first-child {
-  direction: rtl;
-  text-align: right;
   width: 16%;
 }
 
@@ -199,7 +140,6 @@ body::after {
   width: auto;
 }
 
-/* 2-column domain tables */
 .md-typeset table th:first-child:nth-last-child(2),
 .md-typeset table td:first-child:nth-last-child(2) {
   width: 30%;
@@ -212,34 +152,6 @@ body::after {
   text-align: center;
 }
 
-/* Study steps */
-.md-typeset .study-step {
-  border-right: 4px solid var(--md-primary-fg-color);
-  padding: 0.35em 1em 0.35em 0;
-  margin: 1em 0;
-  background: rgba(99, 102, 241, 0.04);
-  border-radius: 0 0.35rem 0.35rem 0;
-}
-
-.md-typeset .study-step h3 {
-  margin-top: 0;
-}
-
-/* Admonitions — math in separate block inside */
-.md-typeset .admonition .formula-block {
-  margin-top: 0.5em;
-}
-
-/* Avoid inline math in Hebrew paragraphs when possible */
-.md-typeset p .arithmatex {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 0.12em;
-  direction: ltr;
-  unicode-bidi: isolate;
-}
-
-/* Nav table on index — both columns RTL */
 .md-typeset .nav-table th,
 .md-typeset .nav-table td {
   direction: rtl;
@@ -250,5 +162,29 @@ body::after {
 .md-typeset .nav-table th:nth-child(2),
 .md-typeset .nav-table td:nth-child(2) {
   text-align: left;
-  direction: rtl;
+}
+
+/* Study steps on index */
+.md-typeset .study-step {
+  border-right: 3px solid var(--md-primary-fg-color);
+  padding: 0.35em 1em 0.35em 0;
+  margin: 1em 0;
+  background: var(--formula-bg);
+  border-radius: 0 0.35rem 0.35rem 0;
+}
+
+.md-typeset .study-step h3 {
+  margin-top: 0;
+}
+
+.md-typeset .admonition .formula-block {
+  margin-top: 0.5em;
+}
+
+.md-typeset p .arithmatex {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.12em;
+  direction: ltr;
+  unicode-bidi: isolate;
 }
