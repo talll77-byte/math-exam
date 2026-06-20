@@ -22,8 +22,21 @@ $$\sqrt[m]{x^n}=x^{n/m}$$
 
 </div>
 
-!!! warning "מוקש"
-    $x^4\cdot x=x^5$ — **לא** $x^4\cdot x=x^4$
+!!! warning "מוקש — כפל חזקות"
+
+    <div class="formula-block" markdown="1">
+
+    $$x^4\cdot x=x^5$$
+
+    </div>
+
+    **לא** נכון:
+
+    <div class="formula-block" markdown="1">
+
+    $$x^4\cdot x=x^4$$
+
+    </div>
 
 ---
 
@@ -55,8 +68,15 @@ $$f'(x)=\frac{1}{4}\cdot 3(5-x)^2\cdot(-1)=-\frac{3}{4}(5-x)^2$$
 
 </div>
 
-!!! warning "מוקש"
-    $\frac{d}{dx}(5-x)=-1$ — אל תשכח את המינוס בנגזרת הפנימית.
+!!! warning "מוקש — נגזרת פנימית"
+
+    <div class="formula-block" markdown="1">
+
+    $$\frac{d}{dx}(5-x)=-1$$
+
+    </div>
+
+    אל תשכח את המינוס בנגזרת הפנימית.
 
 ---
 
@@ -110,7 +130,7 @@ $$x(x-2)(3x-4) \;\Rightarrow\; (x^2-2x)(3x-4)$$
 
 ## 6. Double Chain Rule
 
-כשגם u וגם v מורכבים — הפעל שרשרת ב-$u'$ וב-$v'$ לפני הצבה ב-$(uv)'$.
+כשגם u וגם v מורכבים — הפעל שרשרת בכל אחד לפני הצבה במכפלה.
 
 ---
 
@@ -128,7 +148,13 @@ $$f'(x)=3x^2(6-x)^4-4x^3(6-x)^3=x^2(6-x)^3(18-7x)$$
 
 </div>
 
-**השוואה לאפס:** $x=0$, $x=6$, $x=\frac{18}{7}$.
+**השוואה לאפס:**
+
+<div class="formula-block" markdown="1">
+
+$$x=0 \qquad x=6 \qquad x=\frac{18}{7}$$
+
+</div>
 
 ---
 

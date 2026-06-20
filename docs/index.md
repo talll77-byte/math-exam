@@ -43,9 +43,15 @@
 3. **גזירה** — הוצאת גורם משותף → השוואה לאפס  
 4. **אימות** — נגזרת שנייה לקיצון + טבלה לעלייה/ירידה  
 
+<div class="formula-row">
+
 <div class="formula-block" markdown="1">
 
-$$f'(x)=0 \;\Rightarrow\; \text{נקודות חשודות}$$
+$$f'(x)=0$$
+
+</div>
+
+<p class="formula-caption he-only">← נקודות חשודות לקיצון</p>
 
 </div>
 
@@ -53,10 +59,15 @@ $$f'(x)=0 \;\Rightarrow\; \text{נקודות חשודות}$$
 
 ## ניווט מהיר
 
-| נושא | קישור |
-|------|-------|
-| דשבורד | [dashboard.md](dashboard.md) |
-| נגזרות | [01-derivatives.md](01-derivatives.md) |
-| תחום הגדרה | [02-domain.md](02-domain.md) |
-| חקירה | [03-investigation.md](03-investigation.md) |
-| מוקשים | [04-pitfalls.md](04-pitfalls.md) |
+<table class="nav-table">
+<thead>
+<tr><th>נושא</th><th>קישור</th></tr>
+</thead>
+<tbody>
+<tr><td>דשבורד</td><td><a href="dashboard/">דשבורד כללים</a></td></tr>
+<tr><td>נגזרות</td><td><a href="01-derivatives/">נגזרות</a></td></tr>
+<tr><td>תחום הגדרה</td><td><a href="02-domain/">תחום הגדרה</a></td></tr>
+<tr><td>חקירה</td><td><a href="03-investigation/">חקירת פונקציה</a></td></tr>
+<tr><td>מוקשים</td><td><a href="04-pitfalls/">מוקשים</a></td></tr>
+</tbody>
+</table>

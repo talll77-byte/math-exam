@@ -654,7 +654,7 @@
 <table>
 <thead>
 <tr>
-<th>סימן <span class="arithmatex">\(f'(x)\)</span></th>
+<th>סימן הנגזרת</th>
 <th>משמעות</th>
 <th>סימן גрафי</th>
 </tr>
@@ -679,13 +679,16 @@
 </table>
 <div class="admonition note">
 <p class="admonition-title">חשוב</p>
-<p><span class="arithmatex">\(f'(x)=0\)</span> <strong>לא</strong> אומר בהכרח קיצון — יכולה להיות נקודת פיתול אופקי.</p>
+<p>השוואה לאפס של הנגזרת הראשונה <strong>לא</strong> אומרת בהכרח קיצון — ייתכן פיתול אופקי.</p>
 </div>
 <hr />
 <h2 id="4">פרוטוקול 4 שלבים</h2>
 <h3 id="_3">שלב א' — מציאת נקודות חשודות</h3>
 <p>גזור, הוצא גורם משותף, השווה לאפס.</p>
-<p><strong>דוגמה:</strong> <span class="arithmatex">\(f(x)=x^4-4x^3+32\)</span></p>
+<p><strong>דוגמה:</strong></p>
+<div class="formula-block">
+<div class="arithmatex">\[f(x)=x^4-4x^3+32\]</div>
+</div>
 <div class="formula-block">
 <div class="arithmatex">\[f'(x)=4x^3-12x^2=4x^2(x-3)=0\]</div>
 <div class="arithmatex">\[x=0,\; x=3\]</div>
@@ -705,7 +708,7 @@
 </thead>
 <tbody>
 <tr>
-<td>סימן <span class="arithmatex">\(f'\)</span></td>
+<td>סימן הנגזרת</td>
 <td><span class="arithmatex">\(-\)</span></td>
 <td><span class="arithmatex">\(0\)</span></td>
 <td><span class="arithmatex">\(-\)</span></td>
@@ -722,15 +725,16 @@
 </tr>
 <tr>
 <td>סוג נקודה</td>
-<td></td>
+<td>—</td>
 <td>פיתול</td>
-<td></td>
+<td>—</td>
 <td>מינימום</td>
-<td></td>
+<td>—</td>
 </tr>
 </tbody>
 </table>
-<p><strong>נציגים ב-<span class="arithmatex">\(f'(x)\)</span>:</strong></p>
+<p>{: .sign-table}</p>
+<p><strong>נציגים בנגזרת הראשונה:</strong></p>
 <div class="formula-block">
 <div class="arithmatex">\[x=-1 \Rightarrow -16 \qquad x=1 \Rightarrow -8 \qquad x=4 \Rightarrow 64\]</div>
 </div>
@@ -745,19 +749,19 @@
 </thead>
 <tbody>
 <tr>
-<td><span class="arithmatex">\(\nearrow\)</span> ואז <span class="arithmatex">\(\searrow\)</span></td>
+<td><span class="arithmatex">\(\nearrow\bullet\searrow\)</span></td>
 <td>מקסימום</td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(\searrow\)</span> ואז <span class="arithmatex">\(\nearrow\)</span></td>
+<td><span class="arithmatex">\(\searrow\bullet\nearrow\)</span></td>
 <td>מינימום</td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(\searrow\)</span> ואז <span class="arithmatex">\(\searrow\)</span></td>
+<td><span class="arithmatex">\(\searrow\bullet\searrow\)</span></td>
 <td>פיתול אופקי</td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(\nearrow\)</span> ואז <span class="arithmatex">\(\nearrow\)</span></td>
+<td><span class="arithmatex">\(\nearrow\bullet\nearrow\)</span></td>
 <td>פיתול אופקי</td>
 </tr>
 </tbody>
@@ -809,16 +813,23 @@
 <tr>
 <td><span class="arithmatex">\(f''(x_0)=0\)</span></td>
 <td>לא מכריע</td>
-<td>חובה טבלת <span class="arithmatex">\(f'\)</span></td>
+<td>חובה טבלת נגזרת ראשונה</td>
 </tr>
 </tbody>
 </table>
-<p><strong>שילוב מומלץ במבחן:</strong> <span class="arithmatex">\(f''\)</span> לסיווג מהיר + טבלה קטנה לחצים.</p>
-<p><strong>דוגמה:</strong></p>
+<p><strong>שילוב מומלץ במבחן:</strong> נגזרת שנייה לסיווג מהיר, וטבלה קטנה לחצים.</p>
+<p><strong>דוגמה — נגזרת שנייה:</strong></p>
 <div class="formula-block">
-<div class="arithmatex">\[f''(x)=12x^2-24x \qquad f''(3)=36&gt;0 \Rightarrow \min\]</div>
-<div class="arithmatex">\[f''(0)=0 \Rightarrow \text{לא מספיק — הטבלה קובעת פיתול}\]</div>
+<div class="arithmatex">\[f''(x)=12x^2-24x\]</div>
+<div class="arithmatex">\[f''(3)=36&gt;0\]</div>
 </div>
+<p class="formula-caption he-only">← מינימום</p>
+
+<div class="formula-block">
+<div class="arithmatex">\[f''(0)=0\]</div>
+</div>
+<p class="formula-caption he-only">← לא מספיק; הטבלה קובעת פיתול אופקי</p>
+
 <hr />
 <p><a href="../02-domain/">← תחום הגדרה</a> | <a href="../dashboard/">דשבורד</a> | <a href="../04-pitfalls/">מוקשים →</a></p>
 

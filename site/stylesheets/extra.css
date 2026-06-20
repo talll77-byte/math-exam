@@ -1,40 +1,160 @@
-/* ── Base: Hebrew body RTL, math always LTR ── */
+/* ═══════════════════════════════════════════
+   Background — subtle grid + PCB / neuron motif
+   ═══════════════════════════════════════════ */
+:root {
+  --bg-base: #f4f6fb;
+  --bg-grid: rgba(99, 102, 241, 0.07);
+  --bg-accent: rgba(99, 102, 241, 0.05);
+  --bg-node: rgba(79, 70, 229, 0.18);
+  --bg-line: rgba(79, 70, 229, 0.09);
+}
+
+[data-md-color-scheme="slate"] {
+  --bg-base: #12141a;
+  --bg-grid: rgba(129, 140, 248, 0.06);
+  --bg-accent: rgba(129, 140, 248, 0.04);
+  --bg-node: rgba(165, 180, 252, 0.14);
+  --bg-line: rgba(165, 180, 252, 0.07);
+}
+
+html {
+  background-color: var(--bg-base);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-color: var(--bg-base);
+  background-image:
+    linear-gradient(var(--bg-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bg-grid) 1px, transparent 1px),
+    radial-gradient(circle at 15% 20%, var(--bg-accent) 0%, transparent 42%),
+    radial-gradient(circle at 85% 75%, var(--bg-accent) 0%, transparent 38%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480' viewBox='0 0 480 480'%3E%3Cg fill='none' stroke='%234f46e5' stroke-opacity='0.11' stroke-width='1'%3E%3Cpath d='M40 120h80l40-40 60 60 80-80 120 120'/%3E%3Cpath d='M60 320h100l30 30 70-70 90 90 70-50'/%3E%3Cpath d='M200 40v60l50 50V200'/%3E%3Cpath d='M360 260v80l-60 40'/%3E%3C/g%3E%3Cg fill='%234f46e5' fill-opacity='0.13'%3E%3Ccircle cx='120' cy='120' r='4'/%3E%3Ccircle cx='240' cy='80' r='3'/%3E%3Ccircle cx='380' cy='200' r='4'/%3E%3Ccircle cx='160' cy='350' r='3'/%3E%3Ccircle cx='320' cy='380' r='4'/%3E%3Ccircle cx='420' cy='120' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 32px 32px, 32px 32px, 100% 100%, 100% 100%, 480px 480px;
+  background-position: 0 0, 0 0, 0 0, 0 0, center;
+  opacity: 0.85;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 30% 40%, rgba(99, 102, 241, 0.06), transparent 55%),
+              radial-gradient(ellipse at 70% 60%, rgba(139, 92, 246, 0.05), transparent 50%);
+  animation: bg-drift 90s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::after {
+    animation: none;
+  }
+}
+
+@keyframes bg-drift {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(2%, -1.5%) scale(1.03); }
+}
+
+/* Content panels — readable over background */
+.md-main__inner {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(6px);
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+[data-md-color-scheme="slate"] .md-main__inner {
+  background: rgba(22, 25, 32, 0.78);
+}
+
+.md-header {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(8px);
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background: rgba(18, 20, 26, 0.9) !important;
+}
+
+.md-sidebar__inner {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(4px);
+}
+
+[data-md-color-scheme="slate"] .md-sidebar__inner {
+  background: rgba(18, 20, 26, 0.72);
+}
+
+/* ═══════════════════════════════════════════
+   RTL / LTR — strict separation
+   ═══════════════════════════════════════════ */
 .md-typeset .arithmatex,
 .md-typeset mjx-container,
-.md-typeset mjx-container *,
-.md-typeset .math-only,
+.md-typeset mjx-container * {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.md-typeset .he-only,
+.md-typeset .formula-caption,
+.md-typeset .study-step,
+.md-typeset .md-typeset__table {
+  direction: rtl;
+  unicode-bidi: isolate;
+}
+
+/* Math blocks — LTR only, never Hebrew inside */
 .md-typeset .formula-block {
   direction: ltr;
   unicode-bidi: isolate;
-  text-align: center;
-}
-
-.md-typeset .he-only {
-  direction: rtl;
-  unicode-bidi: isolate;
-  text-align: right;
-}
-
-/* Block formulas */
-.md-typeset .formula-block {
   display: block;
-  margin: 0.6em 0 0.8em;
-  padding: 0.5em 0.75em;
-  background: var(--md-code-bg-color);
-  border-radius: 0.35rem;
+  margin: 0.5em 0;
+  padding: 0.65em 0.85em;
+  text-align: center;
+  background: rgba(99, 102, 241, 0.06);
+  border: 1px solid rgba(99, 102, 241, 0.12);
+  border-radius: 0.4rem;
   overflow-x: auto;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .formula-block {
+  background: rgba(129, 140, 248, 0.08);
+  border-color: rgba(129, 140, 248, 0.15);
+}
+
+.md-typeset .formula-caption {
+  text-align: center;
+  font-size: 0.92em;
+  color: var(--md-default-fg-color--light);
+  margin: 0.15em 0 0.65em;
+}
+
+.md-typeset .formula-row {
+  margin: 0.75em 0 1em;
 }
 
 .md-typeset div.arithmatex {
   display: block;
-  margin: 0.6em 0;
+  margin: 0.4em 0;
   text-align: center;
 }
 
-/* Learning tables: all content tables in docs */
+/* Tables */
 .md-typeset table {
   width: 100%;
   table-layout: fixed;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table {
+  background: rgba(30, 33, 42, 0.55);
 }
 
 .md-typeset table th,
@@ -43,7 +163,6 @@
   padding: 0.65em 0.75em;
 }
 
-/* Last column in 3-col tables = Hebrew */
 .md-typeset table th:first-child,
 .md-typeset table td:first-child {
   direction: rtl;
@@ -51,7 +170,6 @@
   width: 28%;
 }
 
-/* Middle column = math only */
 .md-typeset table th:nth-child(2),
 .md-typeset table td:nth-child(2) {
   direction: ltr;
@@ -66,31 +184,71 @@
   width: 28%;
 }
 
-/* 2-column tables: Hebrew | math */
+/* Sign / wide tables (investigation) */
+.md-typeset table.sign-table th:first-child,
+.md-typeset table.sign-table td:first-child {
+  direction: rtl;
+  text-align: right;
+  width: 16%;
+}
+
+.md-typeset table.sign-table th:not(:first-child),
+.md-typeset table.sign-table td:not(:first-child) {
+  direction: ltr;
+  text-align: center;
+  width: auto;
+}
+
+/* 2-column domain tables */
 .md-typeset table th:first-child:nth-last-child(2),
 .md-typeset table td:first-child:nth-last-child(2) {
-  width: 35%;
+  width: 30%;
 }
 
 .md-typeset table th:last-child:nth-first-child(2),
 .md-typeset table td:last-child:nth-first-child(2) {
-  width: 65%;
+  width: 70%;
+  direction: ltr;
+  text-align: center;
 }
 
-/* Steps for learning path */
+/* Study steps */
 .md-typeset .study-step {
   border-right: 4px solid var(--md-primary-fg-color);
-  padding: 0.25em 1em 0.25em 0;
+  padding: 0.35em 1em 0.35em 0;
   margin: 1em 0;
+  background: rgba(99, 102, 241, 0.04);
+  border-radius: 0 0.35rem 0.35rem 0;
 }
 
 .md-typeset .study-step h3 {
   margin-top: 0;
 }
 
-/* Inline math in Hebrew sentences: avoid — but if present, isolate */
+/* Admonitions — math in separate block inside */
+.md-typeset .admonition .formula-block {
+  margin-top: 0.5em;
+}
+
+/* Avoid inline math in Hebrew paragraphs when possible */
 .md-typeset p .arithmatex {
   display: inline-block;
   vertical-align: middle;
-  margin: 0 0.15em;
+  margin: 0 0.12em;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* Nav table on index — both columns RTL */
+.md-typeset .nav-table th,
+.md-typeset .nav-table td {
+  direction: rtl;
+  text-align: right;
+  width: 50%;
+}
+
+.md-typeset .nav-table th:nth-child(2),
+.md-typeset .nav-table td:nth-child(2) {
+  text-align: left;
+  direction: rtl;
 }

@@ -673,9 +673,15 @@
 </tbody>
 </table>
 <div class="admonition note">
-<p class="admonition-title">הבדל קריטי</p>
-<p><strong>במונה:</strong> <span class="arithmatex">\(\ge 0\)</span> (כולל אפס)<br />
-<strong>במכנה:</strong> <span class="arithmatex">\(&gt; 0\)</span> (בלי אפס)</p>
+<p class="admonition-title">הבדל קריטי — שורש במונה לעומת במכנה</p>
+<p><strong>במונה:</strong> הביטוי בתוך השורש חייב להיות גדול או שווה לאפס (כולל אפס).</p>
+<div class="formula-block" markdown="1">
+<div class="arithmatex">\[g(x)\ge 0\]</div>
+</div>
+<p><strong>במכנה:</strong> הביטוי בתוך השורש חייב להיות <strong>גדול</strong> מאפס בלבד.</p>
+<div class="formula-block" markdown="1">
+<div class="arithmatex">\[g(x)&gt;0\]</div>
+</div>
 </div>
 <hr />
 <h2 id="_3">דיסקרימיננטה</h2>
@@ -687,7 +693,7 @@
 <tr>
 <th><span class="arithmatex">\(\Delta\)</span></th>
 <th>משמעות</th>
-<th>בתחום הגדרה</th>
+<th>הערה</th>
 </tr>
 </thead>
 <tbody>
@@ -704,7 +710,7 @@
 <tr>
 <td><span class="arithmatex">\(&lt;0\)</span></td>
 <td>אין שורש ממשי</td>
-<td><strong>במכנה:</strong> אין אילוץ</td>
+<td>במכנה: אין אילוץ</td>
 </tr>
 </tbody>
 </table>
@@ -742,25 +748,45 @@
 <tr>
 <th>רכיב</th>
 <th>תנאי</th>
-<th>תחום</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>מונה</td>
 <td><span class="arithmatex">\(x^2+2x-8\ge 0\)</span></td>
-<td><span class="arithmatex">\(x\ge 2\)</span> או <span class="arithmatex">\(x\le -4\)</span></td>
 </tr>
 <tr>
 <td>מכנה</td>
 <td><span class="arithmatex">\(x^2-x-12&gt;0\)</span></td>
-<td><span class="arithmatex">\(x&gt;4\)</span> או <span class="arithmatex">\(x&lt;-3\)</span></td>
 </tr>
 </tbody>
 </table>
+<p><strong>תחום המונה:</strong></p>
+<div class="formula-block">
+<div class="arithmatex">\[x\ge 2\]</div>
+</div>
+<p class="formula-caption he-only">או</p>
+
+<div class="formula-block">
+<div class="arithmatex">\[x\le -4\]</div>
+</div>
+<p><strong>תחום המכנה:</strong></p>
+<div class="formula-block">
+<div class="arithmatex">\[x&gt;4\]</div>
+</div>
+<p class="formula-caption he-only">או</p>
+
+<div class="formula-block">
+<div class="arithmatex">\[x&lt;-3\]</div>
+</div>
 <p><strong>חיתוך סופי:</strong></p>
 <div class="formula-block">
-<div class="arithmatex">\[x&gt;4 \;\;\text{או}\;\; x\le -4\]</div>
+<div class="arithmatex">\[x&gt;4\]</div>
+</div>
+<p class="formula-caption he-only">או</p>
+
+<div class="formula-block">
+<div class="arithmatex">\[x\le -4\]</div>
 </div>
 <hr />
 <h2 id="2-12">דוגמה 2 — שורשים זרים (תרגיל 12)</h2>
@@ -772,30 +798,43 @@
 <tr>
 <th>שורש</th>
 <th>תנאי</th>
-<th>תחום</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>שמאלי</td>
 <td><span class="arithmatex">\(-x^2+2x+3\ge 0\)</span></td>
-<td><span class="arithmatex">\(-1\le x\le 3\)</span></td>
 </tr>
 <tr>
 <td>ימני</td>
 <td><span class="arithmatex">\(2x^2+5x+3\ge 0\)</span></td>
-<td><span class="arithmatex">\(x\ge -1\)</span> או <span class="arithmatex">\(x\le -1.5\)</span></td>
 </tr>
 </tbody>
 </table>
+<p><strong>תחום השורש השמאלי:</strong></p>
+<div class="formula-block">
+<div class="arithmatex">\[-1\le x\le 3\]</div>
+</div>
+<p><strong>תחום השורש הימני:</strong></p>
+<div class="formula-block">
+<div class="arithmatex">\[x\ge -1\]</div>
+</div>
+<p class="formula-caption he-only">או</p>
+
+<div class="formula-block">
+<div class="arithmatex">\[x\le -1.5\]</div>
+</div>
 <p><strong>חיתוך סופי:</strong></p>
 <div class="formula-block">
 <div class="arithmatex">\[-1\le x\le 3\]</div>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">אימות</p>
-<p>שורש שמאלי: שורשים <span class="arithmatex">\(-1\)</span> ו-<span class="arithmatex">\(3\)</span>, מקדם <span class="arithmatex">\(a=-1\)</span> (בוכה) → חיובי <strong>בין</strong> השורשים.<br />
-הצבה <span class="arithmatex">\(x=0\)</span> נותנת <span class="arithmatex">\(\sqrt{3}-\sqrt{3}=0\)</span> — נקודה בתחום.</p>
+<p>שורש שמאלי: שורשים ב-1- ו-3, מקדם שלילי (פרבולה בוכה) → החיובי <strong>בין</strong> השורשים.</p>
+<div class="formula-block" markdown="1">
+<div class="arithmatex">\[-1\le x\le 3\]</div>
+</div>
+<p>הצבה של 0 בפונקציה נותנת אפס — נקודה בתוך התחום.</p>
 </div>
 <hr />
 <h2 id="3-6">דוגמה 3 — מכנה "חסין" (תרגיל 6)</h2>
@@ -806,7 +845,6 @@
 <thead>
 <tr>
 <th>רכיב</th>
-<th>דלתא</th>
 <th>אילוץ</th>
 </tr>
 </thead>
@@ -814,15 +852,15 @@
 <tr>
 <td>מכנה שמאלי</td>
 <td><span class="arithmatex">\(\Delta=-8\)</span></td>
-<td>אין — "כל x"</td>
 </tr>
 <tr>
 <td>מכנה ימני</td>
-<td><span class="arithmatex">\(\Delta&gt;0\)</span></td>
 <td><span class="arithmatex">\(x\neq 1\)</span>, <span class="arithmatex">\(x\neq -1\)</span></td>
 </tr>
 </tbody>
 </table>
+<p class="formula-caption he-only">מכנה שמאלי: אין אפסים — אין אילוץ ממנו</p>
+
 <hr />
 <p><a href="../01-derivatives/">← נגזרות</a> | <a href="../dashboard/">דשבורד</a> | <a href="../03-investigation/">חקירה →</a></p>
 

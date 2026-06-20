@@ -576,34 +576,34 @@
 <tr>
 <th>מוקש</th>
 <th>טעות נפוצה</th>
-<th>מה לעשות</th>
+<th>תיקון</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>כפל חזקות</td>
-<td><span class="arithmatex">\(x^4\cdot x=x^4\)</span></td>
+<td>מחברים מעריכים במקום מכפילים</td>
 <td><span class="arithmatex">\(x^4\cdot x=x^5\)</span></td>
 </tr>
 <tr>
 <td>נגזרת פנימית</td>
-<td><span class="arithmatex">\(\frac{d}{dx}(6-x)=1\)</span></td>
-<td>התשובה היא <span class="arithmatex">\(-1\)</span></td>
+<td>שוכחים מינוס</td>
+<td><span class="arithmatex">\(\frac{d}{dx}(6-x)=-1\)</span></td>
 </tr>
 <tr>
 <td>מנה קבוע</td>
-<td>שכחת מינוס</td>
+<td>שוכחים מינוס בנוסחה</td>
 <td><span class="arithmatex">\(\left(\frac{c}{g}\right)'=\frac{-cg'}{g^2}\)</span></td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(f''=0\)</span></td>
-<td>מסיקים "פיתול"</td>
-<td>בדוק סימן <span class="arithmatex">\(f'\)</span> לפני ואחרי</td>
+<td>נגזרת שנייה אפס</td>
+<td>מסיקים פיתול בלי בדיקה</td>
+<td>בדוק סימן הנגזרת הראשונה</td>
 </tr>
 <tr>
-<td><span class="arithmatex">\(f''\)</span> לבד</td>
-<td>מחפשים עלייה/ירידה</td>
-<td>רק טבלת <span class="arithmatex">\(f'\)</span></td>
+<td>נגזרת שנייה לבד</td>
+<td>מחפשים עלייה וירידה</td>
+<td>רק טבלת הנגזרת הראשונה</td>
 </tr>
 </tbody>
 </table>
@@ -614,24 +614,24 @@
 <tr>
 <th>מוקש</th>
 <th>טעות נפוצה</th>
-<th>מה לעשות</th>
+<th>תיקון</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>שורש במכנה</td>
-<td><span class="arithmatex">\(g(x)\ge 0\)</span></td>
+<td>משתמשים ב-greater-or-equal</td>
 <td><span class="arithmatex">\(g(x)&gt;0\)</span> בלבד</td>
 </tr>
 <tr>
 <td>דלתא שלילית במכנה</td>
 <td>מחפשים אפסים</td>
-<td>אין — "כל x"</td>
+<td>אין אילוץ — "כל x"</td>
 </tr>
 <tr>
 <td>מכנה + שורש</td>
 <td>פותרים יחד</td>
-<td>הפרד מ' / ש', חתוך בסוף</td>
+<td>הפרד מכנה / שורש, חתוך בסוף</td>
 </tr>
 <tr>
 <td>פרבולה בוכה</td>
@@ -644,27 +644,35 @@
 <h2 id="_4">טעויות נפוצות בחומר לימוד</h2>
 <div class="admonition warning">
 <p class="admonition-title">תרגיל 12 — תחום שורשים</p>
-<p>לפעמים מופיע בטעות <span class="arithmatex">\(1\le x\le 3\)</span>.<br />
-<strong>התשובה הנכונה:</strong> <span class="arithmatex">\(-1\le x\le 3\)</span><br />
-<strong>בדיקה:</strong> שורש שמאלי <span class="arithmatex">\(-x^2+2x+3\ge 0\)</span> עם <span class="arithmatex">\(a=-1\)</span> נותן תחום בין <span class="arithmatex">\(-1\)</span> ל-<span class="arithmatex">\(3\)</span>.</p>
+<p>לפעמים מופיע בטעות:</p>
+<div class="formula-block" markdown="1">
+<div class="arithmatex">\[1\le x\le 3\]</div>
+</div>
+<p><strong>התשובה הנכונה:</strong></p>
+<div class="formula-block" markdown="1">
+<div class="arithmatex">\[-1\le x\le 3\]</div>
+</div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">חזקה זוגית</p>
-<p><span class="arithmatex">\(x^4=1\)</span> נותן <strong>שני</strong> פתרונות: <span class="arithmatex">\(x=1\)</span> ו-<span class="arithmatex">\(x=-1\)</span>.</p>
+<div class="formula-block" markdown="1">
+<div class="arithmatex">\[x^4=1 \;\Rightarrow\; x=1 \;\|\; x=-1\]</div>
+</div>
+<p>שני פתרונות — אל תפספס את השלילי.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">נגזרת שנייה</p>
-<p><span class="arithmatex">\(f''&gt;0\)</span> אומר מינימום — <strong>לא</strong> אומר שהפונקציה עולה בכל האזור.</p>
+<p>נגזרת שנייה חיובית → מינימום. <strong>לא</strong> אומרת שהפונקציה עולה בכל האזור.</p>
 </div>
 <hr />
 <h2 id="_5">רשימת בדיקה לפני הגשה</h2>
 <ul>
-<li>[ ] רשמתי מ' ו-ש' בתחילת התרגיל?</li>
+<li>[ ] רשמתי מכנה ושורש בתחילת התרגיל?</li>
 <li>[ ] פישטתי לפני גזירה?</li>
-<li>[ ] הוצאתי גורם משותף לפני <span class="arithmatex">\(f'(x)=0\)</span>?</li>
-<li>[ ] סיווגתי קיצון (טבלה או <span class="arithmatex">\(f''\)</span>)?</li>
-<li>[ ] כתבתי תחומי עלייה/ירידה מהטבלה?</li>
-<li>[ ] הצבתי <span class="arithmatex">\(x\)</span> ב-<span class="arithmatex">\(f(x)\)</span> ולא בנגזרת?</li>
+<li>[ ] הוצאתי גורם משותף לפני השוואה לאפס?</li>
+<li>[ ] סיווגתי קיצון (טבלה או נגזרת שנייה)?</li>
+<li>[ ] כתבתי תחומי עלייה וירידה מהטבלה?</li>
+<li>[ ] הצבתי x בפונקציה המקורית ולא בנגזרת?</li>
 </ul>
 <hr />
 <p><a href="../03-investigation/">← חקירה</a> | <a href="../dashboard/">דשבורד</a> | <a href="../">בית →</a></p>
